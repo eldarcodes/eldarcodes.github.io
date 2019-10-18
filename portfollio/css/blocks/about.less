@@ -1,0 +1,64 @@
+// main: ../style.less
+.about{
+    margin: 8.4rem 0;
+}
+.about__inner{
+    display: flex;
+}
+.about__photo,
+.about__content{
+    width: 50%;
+    @media @tabled{
+        width: 100%;
+    }
+}
+.about__title{
+    font-size: 3rem;
+    color: @black;
+    font-weight: 700;
+    text-transform: uppercase;
+    @media @notebook{
+        font-size: 2.5rem;
+    }
+}
+.about__bigtitle{
+    font-size: 6.13rem;
+    margin-bottom: 1.4rem;
+    color: fade(@black,15%);
+    font-weight: 700;
+    line-height: 1.1;
+    text-transform: uppercase;
+    @media @notebook{
+        font-size: 4rem;
+    }
+}
+.about__text{
+    margin-bottom: 2.8rem;
+    font-size: 0.8rem;
+    color: @gray;
+    line-height: 2;
+    font-weight: 300;
+}
+.about__content{
+    padding-left: 3.2rem;
+    margin-top: 2rem;
+}
+.about__photo{
+    position: relative;
+    img {
+        position: absolute;
+        bottom: 0;
+        z-index: 2;
+        bottom: 20px;
+    }
+    &:before{
+        content: "";
+        width: 413px;
+        height: 413px;
+        background-color: #EFEFEF;
+        position: absolute;
+        left: 1rem;
+        bottom: 20px;
+        z-index: 1;
+    }
+}
