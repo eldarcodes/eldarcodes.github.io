@@ -1,4 +1,4 @@
-const textArray = ["ходор", "печенье", "кабан", "красавчик"];
+const textArray = ["ходор", "печенье", "смешные шутки", "молодой и красивый чорт"];
 const typingDelay = 200;
 const erasingDelay = 100;
 const newTextDelay = 2000;
