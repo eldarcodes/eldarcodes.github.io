@@ -237,7 +237,7 @@
   }
   .slick-slide:nth-child(4n + 1) {
     .surf-box {
-      margin-top: 32px;
+      margin-top: 32px; 
     }
   }
   .slick-slide:nth-child(4n + 3) {
@@ -370,7 +370,7 @@
   height: 23px;
   background-color: $green;
   border-radius: 50%;
-  box-shadow: 0 0 20px $green;
+  box-shadow: 0 0 10px $green;
 }
 
 .slider-dots__content {
@@ -466,5 +466,122 @@
   }
   
 }
+
+.holder{
+  background-image: url(../img/travel-bg.png);
+  &.sleep{
+    background-image: url(../img/frangipani.png);
+  }
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  .slider-arrows{
+    top: 225px;
+    opacity: 0.4;
+  }
+}
+
+.holder-slider{
+  &__head{
+    background-repeat: no-repeat;
+    background-position: top left;
+    min-height: 780px;
+
+  }
+  &__descr{
+    padding: 160px 0 0 132px;
+    min-height: 320px;
+    margin-top: 230px;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: contain;
+    .descr__head{
+      position: relative;
+      padding-right: 68px;
+      &.descr__head-sleep{
+
+        padding-right: 215px;
+      }
+      img{
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      .holder__star-list{
+        position: absolute;
+        top: 0;
+        right: 0;
+        li{
+          display: inline-block;
+          margin-left: -25px;
+          img{
+            position: static;
+          }
+        }
+        
+      }
+    }
+  }
+  &__subtitle{
+    text-align: right;
+    padding-right: 80px;
+    padding-top: 132px;
+  }
+  &__btn{
+    text-align: center;
+  }
+}
+
+.holder-slider__info{
+  display: flex;
+  justify-content: space-around;
+}
+
+.holder-slider__info-item{
+  margin-bottom: 66px;
+  min-height: 200px;
+  position: relative;
+}
+
+.holder-slider__info-subtitle{
+  position: absolute;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 8px;
+  top: 97px;
+  left: -97px;
+  width: 200px;
+  height: 0;
+  opacity: 0.5;
+  transform: rotate(-90deg);
+  white-space: nowrap;
+  text-align: right;
+}
+
+.holder-slider__info-title{
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 36px;
+  position: relative;
+  padding-left: 40px;
+  .holder-pricing__span{
+    opacity: 0.75;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 0;
+    letter-spacing: 5px;
+    position: absolute;
+    bottom: -8px;
+    right: 0;
+    
+  }
+}
+
+
+
+
+
+
+
+
 
 @import "media";

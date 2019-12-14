@@ -16,7 +16,7 @@ body {
   text-transform: uppercase;
 }
 
-.containter {
+.container {
   max-width: 1920px;
   margin: 0 auto;
 }
@@ -50,6 +50,26 @@ li {
     height: 1px;
     background-color: #fff;
     left: 0;
+    top: 50%;
+  }
+}
+
+.headline-right{
+  font-size: 22px;
+  line-height: 32px;
+  letter-spacing: 7.33333px;
+  color: #ffffff;
+  opacity: 0.5;
+  padding-right: 103px;
+  position: relative;
+  display: inline-block;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 1px;
+    background-color: #fff;
+    right: 0;
     top: 50%;
   }
 }
@@ -126,4 +146,93 @@ li {
       transform: translateY(-50%);
     }
   }
+}
+
+.surf,
+.holder{
+  padding: 160px 0 120px;
+}
+
+.descr{
+  display: inline-block;
+  &__head{
+    position: relative;
+    padding-right: 78px;
+    img{
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    font-weight: 800;
+    font-size: 40px;
+    span{
+      font-weight: 100;
+    }
+  }
+
+}
+
+.holder{
+  padding-bottom: 265px;
+  margin-bottom: 35px;
+}
+
+.quantity {
+  display: inline-block;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+{
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number]
+{
+  -moz-appearance: textfield;
+}
+  
+.quantity input {
+  width: 35px;
+  height: 42px;
+  display: block;
+  border: none;
+  background-color: transparent;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 36px;
+  color: #fff;
+}
+
+.quantity input:focus {
+  outline: 0;
+}
+
+.quantity-nav {
+  float: left;
+  position: static;
+  height: 42px;
+}
+
+.quantity-button {
+  position: relative;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 45px;
+}
+
+.quantity-button.quantity-up {
+  position: absolute;
+  right: 0;
+}
+
+.quantity-button.quantity-down {
+  position: absolute;
+  right: 25px;
+
 }
