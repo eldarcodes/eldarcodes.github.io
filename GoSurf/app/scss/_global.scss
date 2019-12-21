@@ -14,6 +14,8 @@ body {
   font-size: 16px;
   color: #fff;
   text-transform: uppercase;
+  overflow-x: hidden;
+  min-width: 320px;
 }
 
 .container {
@@ -75,12 +77,15 @@ li {
 }
 
 .title {
-  span {
+  div {
     font-weight: 800;
     font-size: 200px;
     color: rgba(#fff, 0.02);
     position: relative;
     transform: translateX(-50px);
+    display: inline-block;
+  }
+  span{
     display: inline-block;
   }
   h3 {
@@ -182,14 +187,12 @@ li {
 }
 
 input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button
-{
+input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-input[type=number]
-{
+input[type=number] {
   -moz-appearance: textfield;
 }
   
@@ -237,7 +240,7 @@ input[type=number]
 
 }
 
-.star-list{
+.star-list {
   li{
       display: inline-block;
       & + li{
