@@ -1,0 +1,250 @@
+@import "vars";
+@import "libs";
+@import "fonts";
+@import "global";
+
+// ============= header__top
+.header__inner {
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  &-logo {
+    margin-right: 50px;
+    cursor: pointer;
+  }
+}
+
+.header__top-address {
+  display: flex;
+  align-items: center;
+  margin-right: 145px;
+  img {
+    width: 20px;
+    height: 30px;
+  }
+  p {
+    font-family: "Myriad Pro Regular";
+    font-size: 14px;
+  }
+}
+
+.header__top-mail {
+  display: flex;
+  align-items: center;
+  margin-right: 70px;
+  img {
+    width: 15px;
+    height: 16px;
+    margin-right: 5px;
+  }
+  p {
+    font-family: "Myriad Pro Regular";
+    font-size: 14px;
+  }
+}
+
+.header__top-phone__number {
+  margin-right: 30px;
+  p {
+    font-weight: 800;
+    font-size: 18px;
+    color: #010101;
+  }
+  span {
+    font-size: 10px;
+    color: #010101;
+  }
+}
+
+.header__top-phone {
+  display: flex;
+  align-items: center;
+}
+
+.header-btn {
+  color: #1fba0a;
+  border: 1px solid #1fba0a;
+  border-radius: 13px;
+  padding: 13px 25px;
+  font-size: 15px;
+  font-family: "Myriad Pro Regular";
+  outline: none;
+  background-color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.2s;
+  &:hover {
+    background-color: #1fba0a;
+    color: #fff;
+  }
+}
+
+// ============= header__nav
+.header__nav {
+  height: 56px;
+}
+
+.header__nav-list {
+  display: flex;
+}
+
+.header__nav-link {
+  padding: 0 25px;
+  &:nth-child(5) {
+    margin-right: 98px;
+  }
+}
+
+.header__nav-menu {
+  padding: 20px 30px;
+  svg {
+    width: 10px;
+    height: 10px;
+  }
+  p {
+    margin-right: 5px;
+  }
+}
+
+.header__nav-cabinet {
+  padding: 0 20px;
+  img {
+    margin-right: 10px;
+  }
+}
+.header__nav-basket {
+  padding: 0 20px;
+  img {
+    margin-right: 10px;
+  }
+}
+
+.header__nav-btn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  &:hover {
+    background-color: $green;
+    color: #fff;
+  }
+}
+
+// ============= header__nav
+.main__page {
+  max-width: 1920px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.main__slider {
+  position: relative;
+}
+
+.main__slider-title p {
+  font-family: "Lemon Tuesday";
+  font-size: 110px;
+  color: $green;
+  padding-top: 110px;
+  padding-bottom: 40px;
+}
+
+.main-sale {
+  width: 150px;
+  height: 150px;
+  background-image: url(../img/main-page/main-sale.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 100px;
+  right: 750px;
+  z-index: 1000;
+}
+
+.main__slider-subtitle {
+  font-style: italic;
+  font-size: 27px;
+  color: #fff;
+}
+
+.main__slider-item {
+  background-image: url(../img/main-page/main-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 675px;
+}
+
+.slider-arrows {
+  position: absolute;
+  top: 290px;
+  z-index: 100;
+}
+
+.slider-arrows__left {
+  left: 150px;
+}
+
+.slider-arrows__right {
+  right: 150px;
+}
+
+
+.slick-dots {
+  display: flex;
+  position: absolute;
+  bottom: 65px;
+  left: 48%;
+  li {
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+    &.slick-active {
+      button {
+        background-color: #1fba0a;
+        border: 2px solid #1fba0a;
+      }
+    }
+  }
+  button {
+    font-size: 0;
+    background-color: transparent;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    border: 2px solid #c2c2c2;
+    cursor: pointer;
+    display: inline-block;
+    user-select: none;
+    outline: none;
+    &:hover {
+      background-color: #1fba0a;
+      border: 2px solid #1fba0a;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import "media";
