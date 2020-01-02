@@ -54,14 +54,100 @@ p {
   margin: 0 auto;
 }
 
-.submit-btn{
-    text-transform: uppercase;
-    color: #fff;
-    padding: 20px 80px;
-    border-radius: 10px;
-    background-color: #fd4f10;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    margin-top: 59px;
+.submit-btn {
+  text-transform: uppercase;
+  color: #fff;
+  padding: 20px 80px;
+  border-radius: 10px;
+  background-color: #fd4f10;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 59px;
+}
+
+.main__menu-sets__title {
+  text-align: center;
+  color: #32505a;
+  font-family: "Lemon Tuesday";
+  font-size: 60px;
+  margin: 95px 0 50px;
+  &:before {
+    display: inline-block;
+    content: "";
+    width: 100px;
+    height: 40px;
+    background-image: url(../img/main__menu/title__line-left.png);
+    background-repeat: no-repeat;
+    margin-right: 30px;
+  }
+  &:after {
+    display: inline-block;
+    content: "";
+    width: 100px;
+    height: 40px;
+    background-image: url(../img/main__menu/title__line-right.png);
+    background-repeat: no-repeat;
+    margin-left: 30px;
+  }
+}
+
+.quantity {
+  position: relative;
+  height: 20px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.quantity input {
+  width: 37px;
+  height: 20px;
+  display: block;
+  border: none;
+  background-color: transparent;
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-weight: 400;
+  color: #000;
+}
+
+.quantity input:focus {
+  outline: 0;
+}
+
+.quantity-nav {
+  float: left;
+  position: static;
+  height: 42px;
+}
+
+.quantity-button {
+  position: relative;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  img{
+    width: 14px;
+    height: 14px;
+  }
+}
+
+.quantity-button.quantity-up {
+  position: absolute;
+  top: 3px;
+  right: 0;
+}
+
+.quantity-button.quantity-down {
+  position: absolute;
+  top: 3px;
+  left: -22px;
 }

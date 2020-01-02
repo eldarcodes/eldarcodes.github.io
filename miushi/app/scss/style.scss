@@ -198,13 +198,14 @@
   right: 150px;
 }
 
-
-.slick-dots {
-  display: flex;
+.header__slider-dots {
   position: absolute;
+  width: 100%;
   bottom: 65px;
-  left: 48%;
+  text-align: center;
+  display: block;
   li {
+    display: inline-block;
     &:not(:last-child) {
       margin-right: 25px;
     }
@@ -233,18 +234,129 @@
   }
 }
 
+.main__menu-sets__slider {
+  display: flex;
+}
 
+.main__menu-sets__slider-item {
+  height: 465px;
+  width: 263px !important;
+  text-align: center;
+  box-shadow: 0 0 20px 10px #f6f6f6;
+  border-radius: 10px;
+  margin-right: 40px;
+  overflow: hidden;
+}
+.slick-slide {
+  outline: none;
+}
 
+.slider-item__title {
+  font-size: 20px;
+  font-weight: 800;
+  margin: 20px 0;
+}
 
+.slider-item__subtitle {
+  font-weight: 300;
+  font-size: 12px;
+}
 
+.slider-item__price {
+  text-align: left;
+  padding: 0 36px;
+  margin-top: 25px;
+  margin-bottom: 27px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  span {
+    font-weight: 800;
+    font-family: "Roboto Slab", serif;
+    font-size: 22px;
+  }
+}
 
+.slider-item__btn {
+  font-weight: 700;
+  font-size: 14px;
+  color: #fff;
+  background-color: #fd4f10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 35px;
+  padding: 15px 0;
+  border-radius: 7px;
+  svg {
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+  }
+  &:hover {
+    background-color: #c63e0d;
+  }
+  p {
+    text-transform: uppercase;
+    margin-right: 15px;
+  }
+}
 
+.main-menu__dots {
+  position: absolute;
+  bottom: -85px;
+  display: block;
+  width: 100%;
+  list-style: none;
+  text-align: center;
+  margin-bottom: 40px;
+  li {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 0;
+    cursor: pointer;
+    &.slick-active {
+      button {
+        background-color: $green;
+      }
+    }
+  }
+  button {
+    border-radius: 50%;
+    font-size: 0;
+    line-height: 0;
+    width: 9px;
+    height: 9px;
+    padding: 0;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: #b3b3b3;
+  }
+}
 
+.main-menu__arrow {
+  position: absolute;
+  bottom: -50px;
+  z-index: 5;
+}
 
+.arrow-right {
+  left: 670px;
+  cursor: pointer;
+}
 
+.arrow-left {
+  left: 440px;
+  cursor: pointer;
+}
 
-
-
-
+.roll-img {
+  margin-left: 38px;
+  margin-bottom: 60px;
+  width: 180px;
+  height: 180px;
+}
 
 @import "media";
