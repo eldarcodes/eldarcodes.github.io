@@ -88,7 +88,7 @@ p {
   &:after {
     display: inline-block;
     content: "";
-    width: 100px;
+    width: 109px;
     height: 40px;
     background-image: url(../img/main__menu/title__line-right.png);
     background-repeat: no-repeat;
@@ -154,4 +154,8 @@ input[type="number"] {
   position: absolute;
   top: 3px;
   left: -22px;
+}
+
+.active{
+  color: #fd4f10 !important;
 }
