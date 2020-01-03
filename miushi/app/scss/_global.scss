@@ -66,12 +66,16 @@ p {
   margin-top: 59px;
 }
 
+.first-slide{
+  margin-top: 70px !important;
+}
+
 .main__menu-sets__title {
   text-align: center;
   color: #32505a;
   font-family: "Lemon Tuesday";
   font-size: 60px;
-  margin: 95px 0 50px;
+  margin: 110px 0 50px;
   &:before {
     display: inline-block;
     content: "";
