@@ -211,4 +211,30 @@ footer {
   }
 }
 
+.slick-dots {
+  list-style: none;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  li {
+    margin-right: 3px;
+    &.slick-active {
+      button {
+        background-color: #3674ba;
+      }
+    }
+    button {
+      font-size: 0;
+      padding: 0;
+      width: 10px;
+      height: 10px;
+      border: none;
+      outline: none;
+      border-radius: 50%;
+      background-color: #8cc0ea;
+    }
+  }
+}
+
 @import "media";

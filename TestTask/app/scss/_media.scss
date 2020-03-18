@@ -40,7 +40,10 @@
 
 @media (max-width: 750px) {
   .main__inner-bg {
-    display: none;
+    display: none !important;
+  }
+  .slick-dots {
+    bottom: -195px;
   }
   .main__inner-info {
     margin-top: 100px;
@@ -100,6 +103,6 @@
     width: 215px;
   }
   .about__inner-info-form img {
-      display: none;
+    display: none;
   }
 }
