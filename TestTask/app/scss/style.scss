@@ -1,0 +1,214 @@
+@import "vars";
+@import "libs";
+@import "fonts";
+@import "global";
+
+header {
+  background-color: #5b6169;
+  height: 90px;
+  font-family: "Myriad Pro Regular";
+  color: #fbfbfb;
+  font-weight: 400;
+  .header__inner-title {
+    padding-top: 28px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    font-size: 24px;
+  }
+  .header__inner-subtitle {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    font-size: 14px;
+  }
+}
+
+.main {
+  background-image: url("../img/main/main-bg.png");
+  height: 471px;
+  background-size: cover;
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-bg {
+      padding-top: 35px;
+    }
+    &-info {
+      color: #fff;
+      font-family: "Open Sans";
+      margin-left: 200px;
+      &-title {
+        font-weight: 400;
+        font-size: 48px;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+      }
+      &-text {
+        color: #335565;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 21px;
+      }
+    }
+  }
+}
+
+.services {
+  &__inner-items {
+    margin-top: 56px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__inner-item {
+    text-align: center;
+    width: 259px;
+    &-title {
+      margin: 25px 0;
+      font-size: 22px;
+      text-transform: uppercase;
+      color: #3674ba;
+      font-weight: 400;
+    }
+    &-text {
+      color: #4e4e4e;
+      font-family: "Arial", serif;
+      line-height: 18px;
+      font-size: 14px;
+    }
+  }
+}
+
+.about {
+  background-color: #d1d1d1;
+  padding-top: 64px;
+  .section-title {
+    margin-bottom: 60px;
+  }
+  .about__inner-info {
+    display: flex;
+    padding-bottom: 54px;
+    &-skills {
+      &-title {
+        color: #7c7c7c;
+        font-family: "Myriad Pro Regular";
+        font-size: 36px;
+      }
+      &-text {
+        font-size: 14px;
+        font-family: "Arial", serif;
+        color: #4e4e4e;
+        font-weight: 400;
+        line-height: 21px;
+      }
+      &-subtitle {
+        text-transform: uppercase;
+        font-family: "Open Sans";
+        font-size: 24px;
+        color: #3674ba;
+        font-weight: 400;
+        margin-bottom: 15px;
+        margin-top: 25px;
+      }
+      &-row {
+        text-transform: uppercase;
+        background-color: #828181;
+        width: 460px;
+        height: 30px;
+        padding: 6px 10px;
+        &:not(:last-child) {
+          margin-bottom: 10px;
+        }
+        position: relative;
+        z-index: 1000;
+        color: #fff;
+        p {
+          position: absolute;
+          top: -10px;
+          z-index: 1000;
+        }
+      }
+      .first:before {
+        content: "";
+        background-color: #3674ba;
+        width: 430px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 30px;
+      }
+      .second:before {
+        content: "";
+        background-color: #3674ba;
+        width: 440px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 30px;
+      }
+      .third:before {
+        content: "";
+        background-color: #3674ba;
+        width: 400px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 30px;
+      }
+      .fourth:before {
+        content: "";
+        background-color: #3674ba;
+        width: 390px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 30px;
+      }
+    }
+  }
+  .about__inner-info-form {
+    .form-input {
+      position: relative;
+      input {
+        margin-top: 10px;
+        border: none;
+        width: 460px;
+        padding: 6px;
+      }
+      textarea {
+        resize: none;
+        height: 110px;
+        width: 460px;
+        border: none;
+        margin-top: 10px;
+        padding: 6px;
+      }
+      button {
+        background-color: #3674ba;
+        padding: 11px 28px;
+        border: none;
+        color: #ffffff;
+        font-size: 14px;
+        position: absolute;
+        bottom: 2px;
+        right: 0;
+        &:hover {
+          cursor: pointer;
+          background-color: darken(#3674ba, 8%);
+        }
+      }
+    }
+  }
+}
+
+footer {
+  .footer__inner {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Myriad Pro Regular";
+    color: #6f6f6f;
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+
+@import "media";
