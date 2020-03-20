@@ -17,8 +17,19 @@
     <header>
       <div class="container">
         <div class="header__inner">
-          <h3 class="header__inner-title">TEST TASK</h3>
-          <h3 class="header__inner-subtitle">template</h3>
+          <div>
+            <h3 class="header__inner-title">TEST TASK</h3>
+            <h3 class="header__inner-subtitle">template</h3>
+          </div>
+          <ul class="header__inner-nav">
+            <li>About us</li>
+            <li>Services</li>
+            <li>Prices</li>
+            <li>Contact</li>
+          </ul>
+          <div class="header__burger">
+            <span></span>
+          </div>
         </div>
       </div>
     </header>
@@ -27,11 +38,13 @@
         <div class="slider-wrapper">
           <div>
             <div class="main__inner">
-              <img
-                class="main__inner-bg"
-                src="./img/main/main-phone.png"
-                alt=""
-              />
+              <div class="main__inner-bg-wrapper">
+                <img
+                  class="main__inner-bg"
+                  src="./img/main/main-phone.png"
+                  alt=""
+                />
+              </div>
               <div class="main__inner-info">
                 <h1 class="main__inner-info-title">iOS apps for free</h1>
                 <p class="main__inner-info-text">
@@ -44,11 +57,13 @@
           </div>
           <div>
             <div class="main__inner">
-              <img
-                class="main__inner-bg"
-                src="./img/main/main-phone.png"
-                alt=""
-              />
+              <div class="main__inner-bg-wrapper">
+                <img
+                  class="main__inner-bg"
+                  src="./img/main/main-phone.png"
+                  alt=""
+                />
+              </div>
               <div class="main__inner-info">
                 <h1 class="main__inner-info-title">iOS apps for free</h1>
                 <p class="main__inner-info-text">
@@ -61,11 +76,13 @@
           </div>
           <div>
             <div class="main__inner">
-              <img
-                class="main__inner-bg"
-                src="./img/main/main-phone.png"
-                alt=""
-              />
+              <div class="main__inner-bg-wrapper">
+                <img
+                  class="main__inner-bg"
+                  src="./img/main/main-phone.png"
+                  alt=""
+                />
+              </div>
               <div class="main__inner-info">
                 <h1 class="main__inner-info-title">iOS apps for free</h1>
                 <p class="main__inner-info-text">
@@ -160,7 +177,44 @@
               </div>
             </div>
             <div class="about__inner-info-form">
-              <img src="./img/about/about-map.png" alt="" />
+              <!-- <img src="./img/about/about-map.png" alt="" /> -->
+              <div id="google-map__wrapper">
+                <div id="google-map"></div>
+                <script>
+                  (function() {
+                    var setting = {
+                      height: 153,
+                      width: 460,
+                      zoom: 16,
+                      queryString:
+                        'Університет митної справи та фінансів, улица Владимира Вернадского, Днипро, Днепропетровская область, Украина',
+                      place_id: 'ChIJV8ZO_tri20ARmq3ppdwZKZs',
+                      satellite: false,
+                      centerCoord: [48.460661875823824, 35.054744091000366],
+                      cid: '0x9b2919dca5e9ad9a',
+                      lang: 'ru',
+                      cityUrl: '/ukraine/dnipro-33401',
+                      cityAnchorText:
+                        'Карта [CITY1], Днепропетровская область, Украина',
+                      id: 'google-map',
+                      embed_id: '181068'
+                    }
+                    var d = document
+                    var s = d.createElement('script')
+                    s.src =
+                      'https://embedgooglemap.1map.com/js/script-for-user.js?embed_id=181068'
+                    s.async = true
+                    s.onload = function(e) {
+                      window.OneMap.initMap(setting)
+                    }
+                    var to = d.getElementsByTagName('script')[0]
+                    to.parentNode.insertBefore(s, to)
+                  })()
+                </script>
+                <a href="https://embedgooglemap.1map.com/ru?embed_id=181068"
+                  >1 Map</a
+                >
+              </div>
               <form>
                 <div class="form-input">
                   <input type="text" placeholder="NAME" />
