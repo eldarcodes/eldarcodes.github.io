@@ -44,8 +44,8 @@ const decipherFunc = () => {
 
   if (key.value.length == 0) {
     offset = 2
-  } else if (key.value.length >= 7) {
-    offset = 3
+  } else if (key.value.length >= 15) {
+    offset = 4
   } else {
     offset = key.value.length
   }
