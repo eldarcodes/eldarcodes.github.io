@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial';
+}
+
+.container {
+  max-width: 1040px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+header {
+  height: 65px;
+  background-color: #bdc3c7;
+}
+
+.header__inner {
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__nav ul {
+  list-style: none;
+  display: flex;
+}
+
+.header__nav li {
+  margin-right: 20px;
+  padding: 5px 15px;
+  border: 1px solid black;
+  border-radius: 5px;
+  color: red;
+  transition: all 0.1s linear;
+}
+
+.header__nav li:hover {
+  cursor: pointer;
+  background-color: red;
+  color: white;
+}
+
+.header__logo {
+  max-width: 100px;
+}
+
+.main-page {
+  position: relative;
+}
+
+.main-page__img {
+  width: 100%;
+}
+
+.main-page__inner {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.main-page__inner-item {
+  width: 400px;
+  height: 150px;
+  background-color: rgba(211, 211, 211, 0.6);
+  padding: 10px;
+
+  border: 2px solid red;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.item__title {
+  margin-top: 25px;
+  font-size: 24px;
+}
+
+.item__text {
+  text-align: center;
+}
+
+.advantages {
+  margin-top: -4px;
+  position: relative;
+}
+
+.flag div {
+  height: 80px;
+}
+
+.flag-black {
+  background-color: black;
+}
+
+.flag-red {
+  background-color: red;
+}
+
+.flag-yellow {
+  background-color: yellow;
+}
+
+.advantages__items {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.advantages__item {
+  margin-top: 10px;
+  width: 240px;
+  height: 270px;
+  padding: 10px;
+  background-color: #bdc3c7;
+  border: 1px solid black;
+  border-radius: 25px;
+}
+
+.advantages__item-text {
+  margin-top: 80px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.advantages__item-button {
+  padding: 20px 40px;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+  background: none;
+  color: red;
+  font-weight: 700;
+}

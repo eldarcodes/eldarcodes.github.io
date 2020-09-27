@@ -1,34 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Шифр Цезаря</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <h1 class="title">Caesar cipher</h1>
-        <div class="left">
-            <h3 class="subtitle">Шифровать текст:</h3>
-            <input class="input" type="text" id="in">
-            <p id="out">Result:</p>
-        </div>
-        <div class="right">
-            <h3 class="subtitle">Расшифровать текст:</h3>
-            <input class="input" type="text" id="out2">
-            <p id="out3">Result: </p>
-        </div>
-        <footer>
-            <div class="copyright">
-                &copy; by mirzabekov228
-            </div>
-        </footer>
-
+      <div class="left">
+        <h3 class="subtitle">Введите ключ шифрования</h3>
+        <input placeholder="Ключ" class="input" type="text" id="key" />
+      </div>
+      <div class="left">
+        <h3 class="subtitle">Шифровать текст:</h3>
+        <input
+          placeholder="Текст для шифрования"
+          class="input"
+          type="text"
+          id="in"
+        />
+        <p id="out">Результат:</p>
+      </div>
+      <div class="right">
+        <h3 class="subtitle">Расшифровать текст:</h3>
+        <input
+          placeholder="Текст для расшифрования"
+          class="input"
+          type="text"
+          id="out2"
+        />
+        <p id="out3">Результат:</p>
+      </div>
     </div>
 
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
