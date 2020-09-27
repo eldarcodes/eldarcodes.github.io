@@ -4,8 +4,10 @@ const cipher = document.getElementById('in')
 const decipher = document.getElementById('out2')
 
 key.addEventListener('input', () => {
-  cipherFunc()
-  decipherFunc()
+  if (key.value.length > 0) {
+    cipherFunc()
+    decipherFunc()
+  }
 })
 
 cipher.addEventListener('input', () => {
@@ -18,46 +20,51 @@ decipher.addEventListener('input', () => {
 
 const cipherFunc = () => {
   let offset
+  if (key.value.length !== 0) {
+    if (key.value.length >= 15) {
+      offset = 4
+    } else {
+      offset = key.value.length
+    }
 
-  if (key.value.length == 0) {
-    offset = 2
-  } else if (key.value.length >= 15) {
-    offset = 4
+    let str = cipher.value
+    let out = ''
+
+    for (let i = 0; i < str.length; i++) {
+      let code = str.charCodeAt(i)
+      code += offset
+      out += String.fromCharCode(code)
+    }
+
+    document.getElementById('out').innerHTML = 'Результат: ' + out
   } else {
-    offset = key.value.length
+    alert('Ошибка, введите ключ шифрования!')
+    cipher.value = ''
   }
-
-  let str = cipher.value
-  let out = ''
-
-  for (let i = 0; i < str.length; i++) {
-    let code = str.charCodeAt(i)
-    code += offset
-    out += String.fromCharCode(code)
-  }
-
-  document.getElementById('out').innerHTML = 'Result: ' + out
 }
 
 const decipherFunc = () => {
   let offset
 
-  if (key.value.length == 0) {
-    offset = 2
-  } else if (key.value.length >= 15) {
-    offset = 4
+  if (key.value.length !== 0) {
+    if (key.value.length >= 15) {
+      offset = 4
+    } else {
+      offset = key.value.length
+    }
+
+    let str = decipher.value
+    let out = ''
+
+    for (let i = 0; i < str.length; i++) {
+      let code = str.charCodeAt(i)
+      code -= offset
+      out += String.fromCharCode(code)
+    }
+
+    document.getElementById('out3').innerHTML = 'Результат: ' + out
   } else {
-    offset = key.value.length
+    alert('Ошибка, введите ключ шифрования!')
+    decipher.value = ''
   }
-
-  let str = decipher.value
-  let out = ''
-
-  for (let i = 0; i < str.length; i++) {
-    let code = str.charCodeAt(i)
-    code -= offset
-    out += String.fromCharCode(code)
-  }
-
-  document.getElementById('out3').innerHTML = 'Result: ' + out
 }
