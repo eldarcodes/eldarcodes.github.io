@@ -1,0 +1,357 @@
+@import "vars";
+@import "libs";
+@import "fonts";
+@import "global";
+
+.header {
+	background-color: $black;
+	border-bottom: 1px solid $main;
+	&__wrapper {
+		color: #fff;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 80px;
+		font-weight: 700;
+	}
+	&__logo {
+		font-size: 20px;
+		cursor: pointer;
+	}
+
+	.scroll-nav__list {
+		display: flex;
+		li {
+			a {
+				color: #fff;
+				margin-left: 30px;
+				transition: color 0.2s ease-in-out;
+				&:hover {
+					color: $main;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+	.scroll-nav__item--active {
+		a {
+			border-bottom: 1px solid $main !important;
+		}
+	}
+}
+
+.main-section {
+	position: relative;
+	background-image: url(../img/slide-1.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		height: 91vh;
+	}
+
+	&__text {
+		color: #fff;
+
+		h2 {
+			font-size: 45px;
+			font-weight: 700;
+			margin-bottom: 20px;
+		}
+		p {
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 26px;
+			max-width: 700px;
+			margin-bottom: 20px;
+		}
+	}
+}
+
+.services {
+	padding-bottom: 80px;
+	background-color: $black;
+	&__top {
+		padding-top: 100px;
+		text-align: center;
+	}
+	&__main {
+		padding-top: 30px;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	&__card {
+		padding: 0 15px;
+		max-width: 50%;
+		flex: 0.333;
+		min-width: 306px;
+		&-wrapper {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 50px 50px 0;
+			background-color: $second;
+			height: 375px;
+			margin-bottom: 30px;
+			text-align: center;
+			padding-bottom: 30px;
+			transition: all 0.2s linear;
+			border-bottom: 2px solid $black;
+
+			&:hover {
+				border-bottom: 2px solid $main;
+				cursor: pointer;
+			}
+		}
+		&-title {
+			font-size: 22px;
+			font-weight: 700;
+			margin-top: 33px;
+			margin-bottom: 25px;
+		}
+		&-text {
+			font-size: 16px;
+			color: #b3b3b3;
+			font-weight: 400;
+			line-height: 26px;
+			margin: 0 0 15px 0;
+		}
+	}
+}
+
+.about {
+	background-color: $second;
+	padding: 100px 0;
+	&__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		&__left {
+			flex: 0.5;
+			padding-right: 20px;
+			img {
+				max-width: 100%;
+			}
+		}
+		&__right {
+			flex: 0.5;
+			padding: 0 10px;
+			padding-left: 20px;
+			h2 {
+				margin: 30px 0;
+			}
+			p {
+				color: #b3b3b3;
+				font-size: 16px;
+				line-height: 26px;
+				text-align: justify;
+				margin-top: 15px;
+				margin-bottom: 30px;
+			}
+		}
+	}
+}
+
+.header__burger {
+	display: none;
+}
+
+.offer {
+	padding: 60px 0;
+	background-image: url(https://top-barbershop.com/media/2016/08/6yvceB8zbYg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top center;
+	position: relative;
+	z-index: 1;
+	&::before {
+		content: "";
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		position: absolute;
+		background-color: rgba($main, 0.9);
+		z-index: 2;
+	}
+	&__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		z-index: 3;
+		&__text {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			text-align: center;
+			h2 {
+				margin: 0;
+			}
+			.offer__text {
+				margin: 25px 0;
+				padding: 0 20px;
+				width: 300px;
+				h4 {
+					margin-bottom: 5px;
+				}
+				&:not(:last-child) {
+					border-right: 2px solid $black;
+				}
+			}
+		}
+	}
+}
+
+.team {
+	background-color: $black;
+	padding: 60px 0 100px 0;
+	.items {
+		display: flex;
+		align-items: center;
+
+		.item {
+			background: $second;
+			padding: 60px 20px 50px 40px;
+			display: flex;
+			flex: 0 0 50%;
+			margin: 0 15px;
+			&__img {
+				margin-right: 35px;
+				img {
+					height: 128px;
+					width: 128px;
+					border-radius: 50%;
+					display: block;
+				}
+			}
+			&__text {
+				&-title {
+					h4 {
+						font-size: 22px;
+						color: #ffffff;
+						font-weight: 700;
+						margin-bottom: 4px;
+					}
+					span {
+						font-size: 12px;
+						color: #e32879;
+						text-transform: uppercase;
+						letter-spacing: 1px;
+					}
+				}
+				p {
+					font-size: 14px;
+					color: #b3b3b3;
+					font-weight: 400;
+					line-height: 26px;
+					margin: 0 0 15px 0;
+				}
+				.more {
+					display: block;
+				}
+				.btn-more {
+					font-weight: 700;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+	.slick-dots {
+		position: absolute;
+		bottom: -25px;
+		left: 47%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		li {
+			button {
+				font-size: 0;
+				width: 8px;
+				height: 8px;
+				background-color: rgba(#fff, 0.3);
+				margin-right: 10px;
+				outline: none;
+				border: none;
+				border-radius: 50%;
+				cursor: pointer;
+				transition: all 0.3s linear;
+			}
+		}
+		.slick-active {
+			button {
+				background-color: $main;
+				width: 20px;
+				border-radius: 5px;
+			}
+		}
+	}
+	.slick-slide {
+		outline: none;
+	}
+}
+
+.products {
+	background: $second;
+	padding: 60px 0;
+	&__cards {
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+	}
+	&__card {
+		height: 435px;
+		width: 289px;
+		margin-left: 10px;
+		margin-right: 10px;
+		position: relative;
+		margin-bottom: 30px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: top center;
+		&:hover {
+			.products__card-text {
+				opacity: 1;
+				transform: scale(1);
+			}
+		}
+		&-text {
+			padding: 30px 20px 60px 20px;
+			text-align: center;
+			background: #191919;
+			position: absolute;
+			left: 20px;
+			top: 23px;
+			width: calc(100% - 40px);
+			height: calc(100% - 46px);
+			opacity: 0;
+			transform: scale(0);
+			transition: all 0.3s linear;
+			p {
+				font-size: 13px;
+				color: #b3b3b3;
+				line-height: 26px;
+				margin: 0 0 15px 0;
+			}
+		}
+		&-title {
+			h4 {
+				font-size: 20px;
+				font-weight: 700;
+				margin-bottom: 4px;
+			}
+			span {
+				font-size: 10px;
+				color: #e32879;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+			}
+		}
+	}
+}
+
+@import "media";

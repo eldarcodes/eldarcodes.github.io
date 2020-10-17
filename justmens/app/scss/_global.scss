@@ -1,0 +1,78 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Libre Franklin", sans-serif;
+  background-color: #fff;
+  font-size: 16px;
+  overflow-x: hidden;
+  min-width: 320px;
+  color: #fff;
+}
+
+.container {
+  max-width: 1040px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-title {
+  color: #e32879;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.main-subtitle {
+  font-size: 45px;
+  text-align: center;
+  font-weight: 700;
+  margin-top: 14px;
+}
+
+.main-btn {
+  font-size: 16px;
+  color: #ffffff;
+  background: $main;
+  display: inline-block;
+  font-weight: 700;
+  padding: 12px 30px 10px;
+  border: none;
+  transition: all 0.1s linear;
+  border-radius: 3px;
+  outline: none;
+  &:hover {
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+  }
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
