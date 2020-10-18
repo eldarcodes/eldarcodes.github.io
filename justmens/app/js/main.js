@@ -44,9 +44,8 @@ scrollnav.init(content, {
 // burger menu
 burger.addEventListener('click', () => {
   burger.classList.toggle('active')
-  menu.classList.toggle('active')
+  document.querySelector('.scroll-nav').classList.toggle('active')
 })
-
 
 const isMobile = /Mobile|webOS|BlackBerry|IEMobile|MeeGo|mini|Fennec|Windows Phone|Android|iP(ad|od|hone)/i.test(
   navigator.userAgent
