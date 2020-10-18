@@ -1,7 +1,22 @@
 const content = document.querySelector('main')
 const insertTarget = document.querySelector('.header__wrapper')
 const footerLinks = document.querySelector('.footer__links')
+const burger = document.querySelector('.header__burger')
+const menu = document.querySelector('.scroll-nav')
+const btnMore = document.querySelectorAll('.btn-more')
+const moreText = document.querySelectorAll('.more')
+const cards = document.querySelectorAll('.products__card')
+const cardWindow = document.querySelectorAll('.products__card-text')
 
+// to top on reload
+window.onbeforeunload = () => {
+  window.scrollTo(0, 0)
+}
+
+// animate
+new WOW().init()
+
+// slider
 $('.items').slick({
   infinite: true,
   slidesToShow: 1,
@@ -10,46 +25,28 @@ $('.items').slick({
   adaptiveHeight: true,
   arrows: false,
   speed: 500,
-  responsive: [
-    {
-      breakpoint: 1000,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-  ],
 })
 
-window.onbeforeunload = () => {
-  window.scrollTo(0, 0)
-}
-
+// scroll nav for footer
 scrollnav.init(content, {
   insertTarget: footerLinks,
   insertLocation: 'append',
   updateHistory: false,
 })
 
+// scroll nav for header
 scrollnav.init(content, {
   insertTarget,
   insertLocation: 'append',
   updateHistory: false,
 })
 
-const burger = document.querySelector('.header__burger')
-const menu = document.querySelector('.scroll-nav')
-
+// burger menu
 burger.addEventListener('click', () => {
   burger.classList.toggle('active')
   menu.classList.toggle('active')
 })
 
-const btnMore = document.querySelectorAll('.btn-more')
-const moreText = document.querySelectorAll('.more')
-
-let cards = document.querySelectorAll('.products__card')
-let cardWindow = document.querySelectorAll('.products__card-text')
 
 const isMobile = /Mobile|webOS|BlackBerry|IEMobile|MeeGo|mini|Fennec|Windows Phone|Android|iP(ad|od|hone)/i.test(
   navigator.userAgent

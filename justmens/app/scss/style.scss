@@ -305,6 +305,16 @@
 .products {
 	background: $second;
 	padding: 60px 0;
+	h1 {
+		margin-bottom: 10px;
+	}
+	h5 {
+		font-size: 15px;
+		color: #b3b3b3;
+		font-weight: 300;
+		text-align: center;
+		margin-bottom: 30px;
+	}
 	&__cards {
 		display: flex;
 		justify-content: space-around;
@@ -422,6 +432,21 @@
 			color: #ffffff;
 			font-weight: 700;
 			margin-bottom: 20px;
+		}
+	}
+}
+
+.prices {
+	background-color: #222;
+	padding: 70px 0;
+	&__inner {
+	
+
+		.price {
+			color: #000;
+			padding: 10px;
+			background-color: $main;
+			margin: 10px;
 		}
 	}
 }
