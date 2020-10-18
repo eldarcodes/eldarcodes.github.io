@@ -323,13 +323,11 @@
 		&:hover {
 			.products__card-text {
 				opacity: 1;
-				transform: scale(1);
 			}
 		}
 		&:focus {
 			.products__card-text {
 				opacity: 1;
-				transform: scale(1);
 			}
 		}
 		&-text {
@@ -342,7 +340,7 @@
 			width: calc(100% - 40px);
 			height: calc(100% - 46px);
 			opacity: 0;
-			transform: scale(0);
+			// transform: scale(0);
 			transition: all 0.3s linear;
 			p {
 				font-size: 13px;

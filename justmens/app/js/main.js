@@ -10,8 +10,6 @@ $('.items').slick({
   adaptiveHeight: true,
   arrows: false,
   speed: 500,
-  autoplay: true,
-  autoplaySpeed: 3000,
   responsive: [
     {
       breakpoint: 1000,
