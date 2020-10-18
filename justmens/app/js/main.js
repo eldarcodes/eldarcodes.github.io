@@ -51,8 +51,21 @@ const moreText = document.querySelectorAll('.more')
 let cards = document.querySelectorAll('.products__card')
 let cardWindow = document.querySelectorAll('.products__card-text')
 
+const isMobile = /Mobile|webOS|BlackBerry|IEMobile|MeeGo|mini|Fennec|Windows Phone|Android|iP(ad|od|hone)/i.test(
+  navigator.userAgent
+)
+
 for (let i in cards) {
-  cards[i].onclick = () => {
-    cardWindow[i].classList.toggle('show')
+  if (isMobile) {
+    cards[i].onclick = () => {
+      cardWindow[i].classList.toggle('show')
+    }
+  } else {
+    cards[i].onmouseenter = () => {
+      cardWindow[i].classList.add('show')
+    }
+    cards[i].onmouseleave = () => {
+      cardWindow[i].classList.remove('show')
+    }
   }
 }

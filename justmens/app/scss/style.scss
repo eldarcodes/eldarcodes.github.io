@@ -43,7 +43,7 @@
 // ============= MAIN SECTION
 .main-section {
 	position: relative;
-	background-image: url(../img/slide-1.jpg);
+	background-image: url(../img/bg.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	&__wrapper {
@@ -320,18 +320,7 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: top center;
-		// &:hover {
-		// 	.products__card-text {
-		// 		opacity: 1;
-		// 		transform: scale(1);
-		// 	}
-		// }
-		// &:focus {
-		// 	.products__card-text {
-		// 		opacity: 1;
-		// 		transform: scale(1);
-		// 	}
-		// }
+
 		.show {
 			opacity: 1;
 			transform: scale(1);
