@@ -3,6 +3,7 @@
 @import "fonts";
 @import "global";
 
+// ============= HEADER
 .header {
 	background-color: $black;
 	border-bottom: 1px solid $main;
@@ -39,7 +40,7 @@
 		}
 	}
 }
-
+// ============= MAIN SECTION
 .main-section {
 	position: relative;
 	background-image: url(../img/slide-1.jpg);
@@ -68,6 +69,8 @@
 		}
 	}
 }
+
+// ============= SERVICES
 
 .services {
 	padding-bottom: 80px;
@@ -121,6 +124,8 @@
 	}
 }
 
+// ============= ABOUT
+
 .about {
 	background-color: $second;
 	padding: 100px 0;
@@ -155,9 +160,7 @@
 	}
 }
 
-.header__burger {
-	display: none;
-}
+// ============= OFFER
 
 .offer {
 	padding: 60px 0;
@@ -206,6 +209,8 @@
 		}
 	}
 }
+
+// ============= TEAM
 
 .team {
 	background-color: $black;
@@ -295,6 +300,8 @@
 	}
 }
 
+// ============= PRODUCTS
+
 .products {
 	background: $second;
 	padding: 60px 0;
@@ -350,6 +357,72 @@
 				text-transform: uppercase;
 				letter-spacing: 1px;
 			}
+		}
+	}
+}
+
+// ============= FOOTER
+
+.footer {
+	padding-top: 80px;
+	padding-bottom: 50px;
+	background-color: $black;
+	&__inner {
+		display: flex;
+		flex-wrap: wrap;
+		.flex {
+			flex: 0 0 25%;
+			max-width: 25%;
+			padding: 0 10px;
+			min-width: 24%;
+		}
+	}
+	&__address {
+		&-logo {
+			margin-bottom: 30px;
+			font-weight: 700;
+			font-size: 30px;
+		}
+		ul {
+			li {
+				list-style: none;
+				font-size: 16px;
+				color: #b3b3b3;
+				line-height: 30px;
+				border-bottom: 2px solid $second;
+			}
+		}
+	}
+	&__copy {
+		padding-top: 25px;
+		color: #b3b3b3;
+		text-align: center;
+		font-size: 16px;
+		font-weight: 400;
+	}
+	&__links {
+		min-width: 100px;
+		h5 {
+			font-size: 20px;
+			color: #ffffff;
+			font-weight: 700;
+			margin-bottom: 20px;
+		}
+		.scroll-nav {
+			&__link {
+				font-size: 16px;
+				color: #b3b3b3;
+				line-height: 36px;
+			}
+		}
+	}
+	&__facebook,
+	&__map {
+		h5 {
+			font-size: 20px;
+			color: #ffffff;
+			font-weight: 700;
+			margin-bottom: 20px;
 		}
 	}
 }

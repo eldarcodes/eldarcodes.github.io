@@ -1,5 +1,6 @@
 const content = document.querySelector('main')
 const insertTarget = document.querySelector('.header__wrapper')
+const footerLinks = document.querySelector('.footer__links')
 
 $('.items').slick({
   infinite: true,
@@ -9,6 +10,8 @@ $('.items').slick({
   adaptiveHeight: true,
   arrows: false,
   speed: 500,
+  autoplay: true,
+  autoplaySpeed: 3000,
   responsive: [
     {
       breakpoint: 1000,
@@ -28,6 +31,12 @@ window.onbeforeunload = () => {
 }
 
 scrollnav.init(content, {
+  insertTarget: footerLinks,
+  insertLocation: 'append',
+  updateHistory: false,
+})
+
+scrollnav.init(content, {
   insertTarget,
   insertLocation: 'append',
   updateHistory: false,
@@ -43,16 +52,3 @@ burger.addEventListener('click', () => {
 
 const btnMore = document.querySelectorAll('.btn-more')
 const moreText = document.querySelectorAll('.more')
-
-for (let i in btnMore) {
-  btnMore[i].innerHTML = ''
-  // btnMore[i].addEventListener('click', () => {
-  //   if (moreText[i].style.display === 'block') {
-  //     moreText[i].style.display = 'none'
-  //     btnMore[i].innerText = 'Read more'
-  //   } else {
-  //     moreText[i].style.display = 'block'
-  //     btnMore[i].innerText = 'Read less'
-  //   }
-  // })
-}
