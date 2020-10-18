@@ -326,6 +326,12 @@
 				transform: scale(1);
 			}
 		}
+		&:focus {
+			.products__card-text {
+				opacity: 1;
+				transform: scale(1);
+			}
+		}
 		&-text {
 			padding: 30px 20px 60px 20px;
 			text-align: center;
