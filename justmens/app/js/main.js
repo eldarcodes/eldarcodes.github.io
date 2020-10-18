@@ -47,3 +47,12 @@ burger.addEventListener('click', () => {
 
 const btnMore = document.querySelectorAll('.btn-more')
 const moreText = document.querySelectorAll('.more')
+
+let cards = document.querySelectorAll('.products__card')
+let cardWindow = document.querySelectorAll('.products__card-text')
+
+for (let i in cards) {
+  cards[i].onclick = () => {
+    cardWindow[i].classList.toggle('show')
+  }
+}
