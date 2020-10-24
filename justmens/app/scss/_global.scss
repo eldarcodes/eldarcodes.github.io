@@ -38,7 +38,7 @@ li {
 }
 
 .main-title {
-  color: #e32879;
+  color: $main;
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
@@ -118,4 +118,8 @@ li {
   100% {
     transform: rotate(360deg);
   }
+}
+
+svg {
+  fill: $main
 }
