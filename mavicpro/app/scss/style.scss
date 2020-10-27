@@ -3,6 +3,263 @@
 @import "fonts";
 @import "global";
 
+.header {
+    position: fixed;
+    top: 30px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 30px;
+        text-transform: uppercase;
+        line-height: 17px;
+        font-size: 15px;
+        @extend %ubuntu-medium;
+    }
+    &__btn {
+        color: #fff;
+        background-color: transparent;
+        padding: 6px 28px;
+        border: 1px solid #fff;
+        border-radius: 3px;
+        text-transform: uppercase;
+        margin-right: 15px;
+        cursor: pointer;
+        transition: all 0.1s linear;
+        &:hover {
+            color: #000;
+            background-color: #fff;
+        }
+    }
+    &__phone {
+        font-size: 16px;
+        line-height: 18px;
+        @extend %ubuntu-bold;
+    }
+}
 
+.menu {
+    &__list-item {
+        display: inline-block;
+        cursor: pointer;
+        & + .menu__list-item {
+            padding-left: 20px;
+        }
+    }
+}
+
+.top {
+    background-image: url("../img/top-bg.jpg");
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(
+            45.97% 54.43% at 50% 45.57%,
+            rgba(23, 26, 28, 0) 50.28%,
+            rgba(23, 26, 28, 0.00225974) 50.29%,
+            rgba(4, 5, 5, 0.820343) 58.72%,
+            rgba(5, 5, 6, 0.792703) 80.08%,
+            #000000 87.89%
+        );
+        opacity: 0.3;
+    }
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 13px;
+        text-align: center;
+    }
+    &__title {
+        font-size: 96px;
+        line-height: 115px;
+        @extend %sf-semibold;
+        margin-bottom: 25px;
+    }
+    &__text {
+        margin: 25px 0 35px;
+        max-width: 325px;
+    }
+    &__social-item {
+        display: inline-block;
+        margin: 0 25px;
+    }
+    &__social-link {
+        opacity: 0.65;
+        transition: all 0.15s linear;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    &__wrapper {
+        display: flex;
+        align-items: flex-end;
+    }
+}
+
+.products {
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 50px;
+    }
+    &__text {
+        max-width: 440px;
+        p {
+            margin-bottom: 30px;
+        }
+    }
+    &__slider-box {
+        position: relative;
+        padding-top: 110px;
+    }
+    &__slider-text {
+        width: 285px;
+        position: absolute;
+        text-align: right;
+        line-height: 28px;
+        font-size: 24px;
+        @extend %ubuntu-medium;
+        bottom: 30px;
+        z-index: 5;
+        left: -250px;
+    }
+    &__slider {
+        max-width: 560px;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 560px;
+            height: 276px;
+            border: 4px solid #fff;
+            top: -15px;
+            right: -17px;
+        }
+    }
+}
+
+.slider-btn {
+    padding: 16px 26px;
+    border: none;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+    z-index: 5;
+    bottom: -45px;
+    outline: none;
+    &__left {
+        right: 60px;
+    }
+    svg {
+        stroke: #000;
+    }
+    &.slick-disabled {
+        background-color: #000 !important;
+        svg {
+            stroke: #fff;
+        }
+    }
+    &:hover {
+        background-color: lightgray;
+    }
+}
+
+.benefits {
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 25px;
+    }
+    &__item {
+        margin-bottom: 100px;
+        display: flex;
+        align-items: flex-end;
+        &:nth-child(even) {
+            margin-left: 40px;
+            transform: translateY(25px);
+        }
+    }
+
+    &__item-1,
+    &__item-3 {
+        position: relative;
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            background-repeat: no-repeat;
+            background-position: 0 0;
+        }
+    }
+    &__item-1 {
+        &::before {
+            background-image: url("../img/line-1.svg");
+            height: 48px;
+            width: 245px;
+            right: -56px;
+            top: 31px;
+        }
+    }
+    &__item-3 {
+        &::before {
+            background-image: url("../img/line-3.svg");
+            width: 254px;
+            height: 39px;
+            top: 45px;
+            right: -60px;
+        }
+        &::after {
+            background-image: url("../img/line-2.svg");
+            width: 463px;
+            height: 62px;
+            right: -54px;
+            top: -70px;
+        }
+    }
+    &__num {
+        font-size: 36px;
+        line-height: 41px;
+        margin-right: 10px;
+        @extend %ubuntu-bold;
+    }
+    &__img {
+        position: relative;
+        margin-right: 32px;
+        &::before {
+            content: "";
+            width: 193px;
+            height: 128px;
+            border: 2px solid #fff;
+            position: absolute;
+            right: -12px;
+            top: -12px;
+            z-index: -1;
+        }
+    }
+    &__info {
+        width: 300px;
+    }
+    &__info-title {
+        margin-bottom: 13px;
+        width: 123px;
+        font-size: 21px;
+        line-height: 24px;
+        @extend %ubuntu-bold;
+    }
+    &__info-text {
+        font-size: 15px;
+        line-height: 18px;
+    }
+}
 
 @import "media";
