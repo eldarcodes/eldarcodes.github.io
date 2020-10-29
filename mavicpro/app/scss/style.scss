@@ -188,44 +188,50 @@
             margin-left: 40px;
             transform: translateY(25px);
         }
+        &:nth-child(3) {
+            margin-left: 30px;
+        }
+        &:nth-child(4) {
+            margin-left: 60px;
+        }
+        &:first-child,
+        &:nth-child(3) {
+            position: relative;
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                background-repeat: no-repeat;
+                background-position: 0 0;
+            }
+        }
+        &:first-child {
+            &::before {
+                background-image: url("../img/line-1.svg");
+                height: 48px;
+                width: 245px;
+                right: -56px;
+                top: 31px;
+            }
+        }
+        &:nth-child(3) {
+            &::before {
+                background-image: url("../img/line-3.svg");
+                width: 254px;
+                height: 39px;
+                top: 45px;
+                right: -60px;
+            }
+            &::after {
+                background-image: url("../img/line-2.svg");
+                width: 463px;
+                height: 62px;
+                right: -54px;
+                top: -70px;
+            }
+        }
     }
 
-    &__item-1,
-    &__item-3 {
-        position: relative;
-        &::before,
-        &::after {
-            content: "";
-            position: absolute;
-            background-repeat: no-repeat;
-            background-position: 0 0;
-        }
-    }
-    &__item-1 {
-        &::before {
-            background-image: url("../img/line-1.svg");
-            height: 48px;
-            width: 245px;
-            right: -56px;
-            top: 31px;
-        }
-    }
-    &__item-3 {
-        &::before {
-            background-image: url("../img/line-3.svg");
-            width: 254px;
-            height: 39px;
-            top: 45px;
-            right: -60px;
-        }
-        &::after {
-            background-image: url("../img/line-2.svg");
-            width: 463px;
-            height: 62px;
-            right: -54px;
-            top: -70px;
-        }
-    }
     &__num {
         font-size: 36px;
         line-height: 41px;
@@ -259,6 +265,249 @@
     &__info-text {
         font-size: 15px;
         line-height: 18px;
+    }
+}
+
+.specification {
+    &__inner {
+        padding-left: 35px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__item {
+    }
+    &__box {
+        position: relative;
+        width: 280px;
+        &::before {
+            content: "";
+            position: absolute;
+            background-repeat: no-repeat;
+            background-position: 0 0;
+        }
+    }
+
+    &__box-2 {
+        margin-top: 140px;
+    }
+    &__box-4 {
+        margin-top: 160px;
+    }
+
+    &__box-1::before {
+        background-image: url("../img/pointer-1.svg");
+        width: 229px;
+        height: 114px;
+        right: -191px;
+        top: 19px;
+    }
+    &__box-2::before {
+        background-image: url("../img/pointer-2.svg");
+        width: 346px;
+        height: 81px;
+        right: -325px;
+        top: -56px;
+    }
+    &__box-3::before {
+        background-image: url("../img/pointer-3.svg");
+        width: 258px;
+        height: 103px;
+        left: -284px;
+        top: 15px;
+    }
+    &__box-4::before {
+        background-image: url("../img/pointer-4.svg");
+        width: 124px;
+        height: 89px;
+        left: -138px;
+        top: -59px;
+    }
+
+    &__box-title {
+        font-size: 21px;
+        line-height: 28px;
+        @extend %ubuntu-bold;
+        margin-bottom: 10px;
+    }
+    &__box-text {
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 18px;
+    }
+}
+
+.questions {
+    &__items {
+        max-width: 757px;
+        padding-bottom: 15px;
+    }
+    &__item {
+        background-color: rgba(0, 0, 0, 0.3);
+        max-width: 690px;
+        position: relative;
+        margin-bottom: 5px;
+        &:nth-child(3):before {
+            position: absolute;
+            content: "";
+            width: 319px;
+            height: 125px;
+            top: -33px;
+            right: -391px;
+            background-image: url("../img/questions-bg.png");
+        }
+    }
+    &__item-title {
+        font-weight: 500;
+        font-size: 21px;
+        @extend %ubuntu-medium;
+        color: rgba(#fff, 0.8);
+        padding: 20px 10px 24px 40px;
+        position: relative;
+        cursor: pointer;
+        &::after {
+            content: url("../img/accord-arrow.svg");
+            position: absolute;
+            width: 72px;
+            height: 67px;
+            background-color: #fff;
+            top: 0;
+            right: -72px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    &__item-text {
+        padding: 0 5px 75px 50px;
+        font-size: 15px;
+        display: none;
+        line-height: 22px;
+    }
+    &__item.questions__item--active {
+        .questions__item-text {
+            display: block;
+        }
+        .questions__item-title:after {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.contacts {
+    &__inner {
+        display: flex;
+        padding-left: 25px;
+    }
+
+    &__info {
+        width: 240px;
+        margin-right: 60px;
+    }
+    &__info-box {
+        margin-bottom: 30px;
+    }
+    &__info-title {
+        line-height: 24px;
+        font-size: 21px;
+        @extend %ubuntu-bold;
+        margin: 0px 0px 13px;
+    }
+    &__info-phone,
+    &__info-email {
+        font-size: 15px;
+        line-height: 18px;
+    }
+    &__info-email:hover {
+        text-decoration: underline;
+    }
+    &__form {
+        width: 570px;
+        margin-right: 106px;
+    }
+    &__form-title {
+        line-height: 24px;
+        font-size: 21px;
+        @extend %ubuntu-bold;
+        margin-bottom: 0 0 13px;
+    }
+    &__form-text {
+        font-size: 15px;
+        line-height: 18px;
+        margin: 15px 0 15px;
+    }
+    &__form-line {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__form-input,
+    &__form-textarea {
+        @extend %ubuntu-regular;
+        background-color: rgba(0, 0, 0, 0.5);
+        border: none;
+        padding: 15px;
+        font-size: 13px;
+        line-height: 15px;
+        outline: none;
+        color: #fff;
+
+        &::placeholder {
+            color: rgba($color: #fff, $alpha: 0.4);
+        }
+    }
+    &__form-input {
+        width: 49%;
+        margin-bottom: 10px;
+    }
+    &__form-textarea {
+        resize: none;
+        width: 100%;
+        min-height: 144px;
+        margin-bottom: 20px;
+    }
+    &__form-btn {
+        background-color: transparent;
+        text-transform: uppercase;
+        font-size: 14px;
+        @extend %ubuntu-bold;
+        line-height: 16px;
+        border: 1px solid #fff;
+        border-radius: 2px;
+        color: #fff;
+        padding: 9px 15px;
+        cursor: pointer;
+        transition: all 0.15s;
+        &:hover {
+            background-color: #fff;
+            color: #000;
+        }
+    }
+    &__social-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__social-link {
+        opacity: 0.5;
+        transition: all 0.15s linear;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    &__social-item {
+        margin: 14px 0;
+    }
+    .footer {
+        position: absolute;
+        bottom: 32px;
+        right: 0;
+        left: 0;
+        &__copy {
+            text-align: right;
+            font-size: 13px;
+            line-height: 15px;
+            color: rgba(#fff, 0.6);
+        }
     }
 }
 
